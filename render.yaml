@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: gotenberg
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerCommand: gotenberg --api-timeout=300s --api-port=10000
+    envVars:
+      - key: PORT
+        value: 10000
